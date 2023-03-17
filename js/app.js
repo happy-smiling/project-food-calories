@@ -68,6 +68,7 @@ function closeAllSelect(elmnt) {
 document.addEventListener("click", closeAllSelect);
 
 
+
 function toBMIProgram(numberWeight,numberHeight){
     document.getElementById('box-ResultBMI').style.display = 'block';
     let value = numberWeight / ((numberHeight / 100) ** 2)
