@@ -1,0 +1,732 @@
+body{
+  font-family: 'Kanit', sans-serif;
+}
+   
+a{
+  text-decoration: none;
+}
+      
+li{
+  list-style: none;
+}
+  
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  transition: 0.6s;
+  z-index: 15;
+}
+  
+.nav-links{
+  margin-bottom: 0;
+}
+      
+.nav-links a{
+  color: black;
+}
+
+.logo{
+  width: 60px;
+  height: 50px;
+}
+
+.menu{
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  font-weight: bold;
+}
+    
+.menu li:hover{
+  background-color: orange;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+  
+.active{
+  background-color:orange;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+    
+.menu li{    
+  padding: 10px 14px;
+}
+
+input[type=checkbox]{
+  display: none;
+} 
+    
+.hamburger{
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+  
+.position-relative{
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+#slider{
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+@keyframes load{
+  from{left:-100%;}
+  to{left:0;}
+}
+  
+.slides{
+  width: 400%;
+  height: 100%;
+  -webkit-animation: slide 30s infinite;
+  -moz-animation: slide 30s infinite;
+  animation: slide 30s infinite;
+}
+
+.slider{
+  width: 25%;
+  height: 100%;
+  float: left;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.slide img , .image , .image img{
+  width: 100%;
+}
+  
+.image img{
+  height: auto;
+}
+  
+.legend{
+  border: 500px solid transparent;
+  border-left: 800px solid rgba(0, 0, 0, 0.7);
+  opacity: 0.5;
+  border-bottom: 0;
+  position: absolute;
+  bottom: 0;
+}
+    
+.content{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.content-txt{
+  width: 350px;
+  height: 250px;
+  float: left;
+  top: 220px;
+  -webkit-animation: content-s 7.5s infinite;
+  -moz-animation: content-s 7.5s infinite;
+  animation: content-s 7.5s infinite;
+}
+  
+.content-txt h1{
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff;
+  text-align: left;
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
+
+.content-txt h2{
+  font-weight: normal;
+  font-size: 20px;
+  font-style: italic;
+  color: #fff;
+  text-align: left;
+  margin-left: 30px;
+}
+  
+.switch{
+  width: 120px;
+  height: 10px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 2;
+  left: 30px;
+}
+  
+.switch > ul{
+  list-style: none;
+}
+  
+.switch > ul > li{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.switch ul{
+  overflow: hidden;
+}
+
+.on{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #f39c12;
+  -webkit-animation: on 30s infinite;
+  -moz-animation: on 30s infinite;
+  animation: on 30s infinite;
+}
+
+@-webkit-keyframes slide{
+  0%,100%{
+    margin-left: 0%;
+  }
+  21%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: -100%;
+  }
+  46%{
+    margin-left: -100%;
+  }
+  50%{
+    margin-left: -200%;
+  }
+  71%{
+    margin-left: -200%;
+  }
+  75%{
+    margin-left: -300%;
+  }
+  96%{
+    margin-left: -300%;
+  }
+}
+  
+@-moz-keyframes slide{
+  0%,100%{
+    margin-left: 0%;
+  }
+  21%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: -100%;
+  }
+  46%{
+    margin-left: -100%;
+  }
+  50%{
+    margin-left: -200%;
+  }
+  71%{
+    margin-left: -200%;
+  }
+  75%{
+    margin-left: -300%;
+  }
+  96%{
+    margin-left: -300%;
+  }
+}
+  
+@keyframes slide{
+  0%,100%{
+    margin-left: 0%;
+  }
+  21%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: -100%;
+  }
+  46%{
+    margin-left: -100%;
+  }
+  50%{
+    margin-left: -200%;
+  }
+  71%{
+    margin-left: -200%;
+  }
+  75%{
+    margin-left: -300%;
+  }
+  96%{
+    margin-left: -300%;
+  }
+}
+  
+@-webkit-keyframes content-s{
+  0%{left: -420px;}
+  10%{left: 0px;}
+  30%{left: 0px;}
+  40%{left: 0px;}
+  50%{left: 0px;}
+  60%{left: 0px;}
+  70%{left: 0;}
+  80%{left: -420px;}
+  90%{left: -420px;}
+  100%{left: -420px;}
+}
+
+@keyframes content-s{
+  0%{left: -420px;}
+  10%{left: 20px;}
+  15%{left: 0px;}
+  30%{left: 0px;}
+  40%{left: 0px;}
+  50%{left: 0px;}
+  60%{left: 0px;}
+  70%{left: 0;}
+  80%{left: -420px;}
+  90%{left: -420px;}
+  100%{left: -420px;}
+}
+    
+@-webkit-keyframes on{
+  0%,100%{
+    margin-left: 0%;
+  }
+  21%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: 15px;
+  }
+  46%{
+    margin-left: 15px;
+  }
+  50%{
+    margin-left: 30px;
+  }
+  71%{
+    margin-left: 30px;
+  }
+  75%{
+    margin-left: 45px;
+  }
+  96%{
+    margin-left: 45px;
+  }
+}
+  
+@-moz-keyframes on{
+  0%,100%{
+    margin-left: 0%;
+  }
+  21%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: 15px;
+  }
+  46%{
+    margin-left: 15px;
+  }
+  50%{
+    margin-left: 30px;
+  }
+  71%{
+    margin-left: 30px;
+  }
+  75%{
+    margin-left: 45px;
+  }
+  96%{
+    margin-left: 45px;
+  }
+}
+    
+@keyframes on{
+  0%,100%{
+    margin-left: 0%;
+  }
+  21%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: 15px;
+  }
+  46%{
+    margin-left: 15px;
+  }
+  50%{
+    margin-left: 30px;
+  }
+  71%{
+    margin-left:30px;
+  }
+  75%{
+    margin-left:45px;
+  }
+  96%{
+    margin-left:45px;
+  }
+}
+
+.center{
+  text-align: center;
+}
+
+.format-text{
+  text-align: right;
+}
+
+.light-bg{
+  background-color: #f8f8f8;
+}
+
+section{
+  padding: 20px 50px;
+}
+
+.img-content{
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-bottom: 15px;
+}
+
+.img-blogcontent{
+  padding-top: 20px;
+  width: 60%;
+  height: 500px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+  
+.title-footer{
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  width: 200px;
+}
+
+.text-footer{
+  color: white;
+}
+
+.padding-about{
+  padding-right: 40px;
+}
+
+.padding-footer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.icon , .social-media{
+  filter: invert(100%); 
+  width: 30px; 
+  height: 30px;
+}
+
+.social-media{
+  margin-left: 15px;
+}
+
+.container{
+  padding: 40px;
+}
+
+.title-content{
+  padding: 20px 0;
+}
+
+.box-bmiProgram {
+  background-color: #fecccc;
+}
+
+.box-adviceBMI,.box-bmrProgram{
+  background-color: #afd7ff;
+}
+
+.box-resultCal{
+  margin: 25px 0px;
+}
+
+.box-bmiProgram , .box-adviceBMI{
+  padding: 60px;
+  margin: 20px;
+}
+
+.box-bmiProgram , .box-adviceBMI,.box-bmrProgram{
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.box-bmrProgram{
+  width: 600px;
+  margin: 0px 200px;
+  padding: 60px;
+}
+
+.box-adviceBMI li , .box-centent li{
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+input[type=float] , input[type=number]{
+  outline: none;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+input[type=float]:focus , input[type=number]:focus{
+  border: 2px solid #ff0000;
+}
+
+.btn-calculator , .btn-clearData{
+  background-color: #ecffa9;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.title-bottom{
+  padding-bottom: 20px;
+}
+
+.rowBMR{
+  margin: 10px 0;
+}
+
+.top-topic{
+  padding: 10px 0px;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: white;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000000 transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: #000000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items {
+  position: absolute;
+  background-color: rgb(243, 255, 164);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 1199px) {
+  .box-bmiProgram , .box-adviceBMI{
+    margin: 20px 0px 40px 0;
+  }
+
+  .box-bmrProgram{
+    margin: 0px 10px;
+  }
+
+  .img-blogcontent{
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu { 
+    display:none;
+    position: absolute;
+    background-color:white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 20px 0;
+    z-index: 10;
+  }
+    
+  .menu li:hover {
+    display: inline-block;
+    background-color:orange;
+    transition: 0.3s ease;
+  }
+  
+  .menu li + li {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  
+  input[type=checkbox]:checked ~ .menu{
+    display: block;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  #slider{
+    height: 280px;
+  }
+
+  .legend{
+    border-left: 500px solid rgba(0, 0, 0, 0.7);
+  }
+
+  .switch {
+    bottom: 31px;
+  }
+
+  .content-txt {
+    width: 280px;
+    height: 250px;
+    top: 100px;
+  }
+  
+  .content-txt h1{
+    font-size: 20px;
+  }
+
+  .content-txt h2 {
+    font-size: 16px;
+  }
+
+  .img-blogcontent{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .legend{
+    border-left: 260px solid rgba(0, 0, 0, 0.7);
+  } 
+
+  .content-txt {
+    width: 180px;
+    height: 240px;
+    top: 50px;
+    left: 3px;
+  }
+  
+  #slider{
+    height: 180px;
+  }
+  
+  .content-txt h1 , .footer-content p , .footer-content h5{
+    font-size: 12px;
+  }
+
+  .content-txt h2{
+    font-size: 10px;
+  }
+
+  .format-text,.center-footer{
+    text-align: center;
+  }
+
+  .social-media{
+    margin-left: 15px;
+    margin-right: 15px;
+  }  
+
+  .title-footer{
+    width: 100%;
+  }
+
+  .padding-about{
+    padding-right: 0px;
+  }
+
+  .images{
+    height: 200px;
+  }
+
+  .container{
+    padding: 20px 0px;
+  }
+
+  .img-content{
+    height: 200px;
+  }
+
+  .box-bmiProgram , .box-adviceBMI{
+    padding: 30px;
+  }
+
+  .margin-btnclear{
+    margin-top: 20px;
+  }
+
+  .box-bmrProgram{
+    margin: 0px;
+    padding: 50px 20px;
+  }
+
+  .img-blogcontent{
+    width: 100%;
+    height: 210px;
+  }
+
+}
+
